@@ -6,12 +6,13 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public int index = 0;
-    void OnTriggerEnter2D(Collider2D obj)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (obj.transform.tag == "Player")
+        if (other.transform.tag == "Player")
         {
             //obj.GetComponent<Items>().AddItem(index); // подбор предмета
             Destroy(gameObject);
+            Debug.Log("123");
         }
     }
 }

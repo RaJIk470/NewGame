@@ -27,8 +27,9 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Damage(20);
-            Death();
+           
         }
+        Death();
     }
     void Death()
     {
